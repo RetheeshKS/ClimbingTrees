@@ -1,5 +1,10 @@
 #include <stdlib.h>
 
+typedef enum {
+  FALSE = 0,
+  TRUE,
+}boolean;
+
 struct node {
   int data;
   int balancefactor;
@@ -7,10 +12,16 @@ struct node {
 };
 typedef struct node datanode;
 
-typedef enum {
-  FALSE = 0,
-  TRUE,
-}boolean;
+datanode * GetLeft(datanode * parent)
+datanode * GetRight(datanode * parent)
+int GetData(datanode * node)
+boolean SetRight(datanode * parent, datanode * right)
+boolean SetLeft(datanode * parent, datanode * left)
+boolean SetData(datanode * node, int data)
+  
+
+
+
 boolean InitNode(datanode *node)
 {
   if (!node){
