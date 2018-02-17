@@ -47,6 +47,33 @@ boolean SetLeft(datanode * parent, datanode * left)
   return TRUE;
 }
 
+boolean GetData(datanode * node, int data)
+{
+  if(!node){
+    return FALSE;
+  }
+  node -> data = data;
+  return TRUE;
+}
+
+datanode * GetRight(datanode * parent)
+{
+  if(!parent){
+    return null;
+  }
+  parent -> right = right;
+  return TRUE;
+}
+
+datanode * GetLeft(datanode * parent)
+{
+  if(!parent){
+    return null;
+  }
+  parent -> left = left;
+  return TRUE;
+}
+
 datanode * GetNewNode(int data)
 {
   datanode temp = (datanode *)malloc(sizeof(datanode));
