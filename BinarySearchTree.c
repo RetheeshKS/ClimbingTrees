@@ -19,7 +19,7 @@ int BST_InsertNode(struct node *root, struct node *newnode)
   }
   return TRUE;  
 }
-int BST_SerachData(struct node *root, int data)
+int BST_SearchData(struct node *root, int data)
 {
   if(!root){
     return FALSE;
