@@ -64,7 +64,7 @@ datanode * GetLeft(datanode * parent)
 
 datanode * GetNewNode(int data)
 {
-  datanode temp = (datanode *)malloc(sizeof(datanode));
+  datanode * temp = (datanode *)malloc(sizeof(datanode));
   if (InitNode(temp)){
     SetData(temp, data);
   }
