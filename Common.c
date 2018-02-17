@@ -47,13 +47,12 @@ boolean SetLeft(datanode * parent, datanode * left)
   return TRUE;
 }
 
-boolean GetData(datanode * node, int data)
+int GetData(datanode * node)
 {
   if(!node){
-    return FALSE;
+    return 0;
   }
-  node -> data = data;
-  return TRUE;
+  return(node -> data);
 }
 
 datanode * GetRight(datanode * parent)
@@ -61,8 +60,7 @@ datanode * GetRight(datanode * parent)
   if(!parent){
     return null;
   }
-  parent -> right = right;
-  return TRUE;
+  return(parent -> right);
 }
 
 datanode * GetLeft(datanode * parent)
@@ -70,8 +68,7 @@ datanode * GetLeft(datanode * parent)
   if(!parent){
     return null;
   }
-  parent -> left = left;
-  return TRUE;
+  return(parent -> left);
 }
 
 datanode * GetNewNode(int data)
