@@ -17,7 +17,7 @@ int BST_InsertNode(struct node *root, struct node *newnode)
       SetRight(root, newnode);
     }
   }
-    
+  return TRUE;  
 }
 int BST_SerachData(struct node *root, int data)
 {
