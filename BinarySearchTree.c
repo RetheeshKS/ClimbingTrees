@@ -21,4 +21,14 @@ int BST_InsertNode(struct node *root, struct node *newnode)
 }
 int BST_SerachData(struct node *root, int data)
 {
+  if(!root){
+    return FALSE;
+  }
+  if(GetData(root) == data){
+    return TRUE;
+  }
+  if(GetData(root) > data){
+     return BST_SerachData(GetLeft(root), data);
+  }
+  return BST_SerachData(GetRight(root), data);
 }
