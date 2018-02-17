@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <common.h>
 
 typedef enum {
   FALSE = 0,
