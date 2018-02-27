@@ -19,7 +19,7 @@ int BST_InsertNode(datanode *root, datanode *newnode)
     }
   }
   if (hops == 1){
-    
+    AVL_BalanceTree(root)
   }
   return hops + 1;  
 }
