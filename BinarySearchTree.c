@@ -32,3 +32,13 @@ int BST_SearchData(struct node *root, int data)
   }
   return BST_SerachData(GetRight(root), data);
 }
+int BST_CalcutateHeight(datanode *root)
+{
+  int myheight = 0;
+  if(root){
+    myheight = max(BST_CalcutateHeight(root->left), BST_CalculateHeight(root->right)) + 1;
+  }
+  return myheight;
+}
+
+  
