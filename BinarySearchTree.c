@@ -1,5 +1,5 @@
 #include <common.h>
-int BST_InsertNode(struct node *root, struct node *newnode)
+int BST_InsertNode(datanode *root, datanode *newnode)
 {
   if(!root){
     return FALSE;
@@ -19,7 +19,7 @@ int BST_InsertNode(struct node *root, struct node *newnode)
   }
   return TRUE;  
 }
-int BST_SearchData(struct node *root, int data)
+int BST_SearchData(datanode *root, int data)
 {
   if(!root){
     return FALSE;
