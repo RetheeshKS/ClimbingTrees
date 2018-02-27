@@ -17,6 +17,7 @@ int BST_InsertNode(datanode *root, datanode *newnode)
       SetRight(root, newnode);
     }
   }
+  
   return TRUE;  
 }
 int BST_SearchData(datanode *root, int data)
@@ -31,6 +32,16 @@ int BST_SearchData(datanode *root, int data)
      return BST_SerachData(GetLeft(root), data);
   }
   return BST_SerachData(GetRight(root), data);
+}
+void BST_AdjustBalanceFactor(datanode *root)
+{
+  int myheight = 0;
+  if (!root) return 0;
+  lheight = BST_AdjustBalanceFactor(root->left);
+  rheight = BST_AdjustBalanceFactor(root->right);
+  myheight = max(lheight, rheight) + 1;
+  root -> balancefactor = lheight - rheight;
+  return myheight;
 }
 int BST_CalcutateHeight(datanode *root)
 {
