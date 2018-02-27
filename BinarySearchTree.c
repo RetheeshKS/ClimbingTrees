@@ -1,24 +1,27 @@
 #include <common.h>
 int BST_InsertNode(datanode *root, datanode *newnode)
-{
+{ 
+  int hops = 0;
   if(!root){
     return FALSE;
   }
   if(GetData(root) >= GetData(newnode)){
     if(GetLeft(root)){
-      BST_InsertNode(GetLeft(root), newnode);
+      hops = BST_InsertNode(GetLeft(root), newnode);
     } else{
       SetLeft(root, newnode);
     } 
   } else {
     if(GetRight(root)){
-      BST_InsertNode(GetRight(root), newnode);
+      hops = BST_InsertNode(GetRight(root), newnode);
     } else{
       SetRight(root, newnode);
     }
   }
-  
-  return TRUE;  
+  if (hops == 1){
+    
+  }
+  return hops + 1;  
 }
 int BST_SearchData(datanode *root, int data)
 {
