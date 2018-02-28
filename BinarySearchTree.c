@@ -5,17 +5,14 @@ datanode * BST_GetParentNode(datanode *root, int data)
   if(root){
     if(GetData(root) >= data){
       if(GetLeft(root)){
-        hops = BST_GetParentNode(GetLeft(root), data);
-      } else{
-        return(root);
-      } 
+        return(BST_GetParentNode(GetLeft(root), data));
+      }
     } else {
       if(GetRight(root)){
-        hops = BST_InsertNode(GetRight(root), data);
-      } else{
-        return(root);
+        return (BST_InsertNode(GetRight(root), data));
       }
     }
+    return(root);
  }
 }
 int BST_InsertNode(datanode *root, datanode *newnode)
