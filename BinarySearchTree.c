@@ -12,8 +12,8 @@ datanode * BST_GetParentNode(datanode *root, int data)
         return (BST_InsertNode(GetRight(root), data));
       }
     }
-    return(root);
- }
+  }
+  return(root);
 }
 int BST_InsertNode(datanode *root, datanode *newnode)
 { 
