@@ -9,7 +9,7 @@ datanode * BST_GetParentNode(datanode *root, int data)
       }
     } else {
       if(GetRight(root)){
-        return (BST_InsertNode(GetRight(root), data));
+        return (BST_GetParentNode(GetRight(root), data));
       }
     }
   }
