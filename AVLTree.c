@@ -8,5 +8,7 @@ void AVL_BalanceTree(datanode *GGP, datanode *GP)
 datanode * AVL_InsertNode(datanode *root, int data)
 {
   if (!root){
-    root = 
+    root = GetNewNode(data);
+  }
+  
 }
