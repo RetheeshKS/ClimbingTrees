@@ -1,4 +1,23 @@
 #include <common.h>
+datanode * BST_GetParentNode(datanode *root, int data)
+{
+  datanode *parent_ret = NULL;
+  if(root){
+    if(GetData(root) >= data){
+      if(GetLeft(root)){
+        hops = BST_GetParentNode(GetLeft(root), data);
+      } else{
+        return(root);
+      } 
+    } else {
+      if(GetRight(root)){
+        hops = BST_InsertNode(GetRight(root), data);
+      } else{
+        return(root);
+      }
+    }
+ }
+}
 int BST_InsertNode(datanode *root, datanode *newnode)
 { 
   int hops = 0;
