@@ -7,13 +7,15 @@ void AVL_BalanceTree(datanode *root, int newdata)
     
   }
 }
-
+datanode * AVL_GetImbalanced()
+{
+}
 datanode * AVL_InsertNode(datanode *root, int data)
 {
   datanode *child = NULL, parent = NULL;
   child =  GetNewNode(data);
   if (root){
-    parent = BST_GetParentNode(root, data);
+    parent = BST_GetDataParent(root, data);
     if(GetData(parent) >= data){
       SetLeft(parent, child);
     } else {
