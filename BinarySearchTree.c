@@ -21,7 +21,7 @@ datanode * BST_GetNodeParent(datanode *root, datanode *child)
   }
   return(root);
 }
-datanode * BST_GetDataParent(datanode *root, int data)
+datanode * BST_GetInsertDataParent(datanode *root, int data)
 {
   datanode *parent_ret = NULL;
   if(root){
