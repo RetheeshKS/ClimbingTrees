@@ -15,7 +15,7 @@ datanode * AVL_GetImbalanced(datanode *root, int hopkey)
    }
    if(abs(GetBalanceFactor(root)) >= 2){
      return root;
-   } else if(GetData(root) >= pathkey){
+   } else if(GetData(root) >= hopkey){
      return (AVL_GetImbalanced(GetLeft(root), hopkey));
    } else {
      return (AVL_GetImbalanced(GetRight(root), hopkey));
