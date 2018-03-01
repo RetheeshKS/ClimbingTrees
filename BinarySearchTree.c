@@ -1,5 +1,5 @@
 #include <common.h>
-datanode * BST_GetParentNode(datanode *root, int data)
+datanode * BST_GetDataParent(datanode *root, int data)
 {
   datanode *parent_ret = NULL;
   if(root){
