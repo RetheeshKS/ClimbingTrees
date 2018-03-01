@@ -1,8 +1,11 @@
 #include<common.h>
 #include<BinarySearchTree.c>
+#include<math.h>
 void AVL_BalanceTree(datanode *root, int newdata)
 {
-  if(imbalan) 
+  if(abs(GetBalanceFactor(root)) >= 2){
+    
+  }
 }
 
 datanode * AVL_InsertNode(datanode *root, int data)
