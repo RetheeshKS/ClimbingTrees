@@ -1,4 +1,20 @@
 #include <common.h>
+datanode * BST_GetNodeParent(datanode *root, datanode *child)
+{
+  datanode *parent_ret = NULL;
+  if(root){
+    if(GetData(root) >= data){
+      if(GetLeft(root)){
+        return(BST_GetParentNode(GetLeft(root), data));
+      }
+    } else {
+      if(GetRight(root)){
+        return (BST_GetParentNode(GetRight(root), data));
+      }
+    }
+  }
+  return(root);
+}
 datanode * BST_GetDataParent(datanode *root, int data)
 {
   datanode *parent_ret = NULL;
