@@ -15,7 +15,7 @@ datanode * AVL_InsertNode(datanode *root, int data)
   datanode *child = NULL, parent = NULL;
   child =  GetNewNode(data);
   if (root){
-    parent = BST_GetDataParent(root, data);
+    parent = BST_GetInsertDataParent(root, data);
     if(GetData(parent) >= data){
       SetLeft(parent, child);
     } else {
