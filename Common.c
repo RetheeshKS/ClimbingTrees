@@ -37,7 +37,14 @@ boolean SetLeft(datanode * parent, datanode * left)
   parent -> left = left;
   return TRUE;
 }
-
+int GetBalanceFactor(datanode *node)
+{
+  if(!node) {
+    return 0;
+  }
+  return node->balancefactor;
+}
+    
 int GetData(datanode * node)
 {
   if(!node){
