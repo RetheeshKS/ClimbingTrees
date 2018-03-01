@@ -25,13 +25,13 @@ datanode * AVL_GetImbalanced(datanode *root, int hopkey)
 int AVL_GetImbalanceType(datanode *grandParent, int hopkey)
 {
    if(GetData(grandParent) >= hopkey){
-     if(GetData(GetLeft(root)) >= hopkey){
+     if(GetData(GetLeft(grandParent)) >= hopkey){
        return LEFTLEFT;
      } else {
        return LEFTRIGHT;
      }
    } else {
-     if(GetData(GetRight(root)) >= hopkey){
+     if(GetData(GetRight(grandParent)) >= hopkey){
        return RIGHTLEFT;
      } else {
        return RIGHTRIGHT;
