@@ -4,13 +4,18 @@ datanode * BST_GetNodeParent(datanode *root, datanode *child)
 {
   datanode *parent_ret = NULL;
   if(root){
-    if(GetData(root) >= data){
+    if(root == child){
+      return rootparent;
+    } else if(GetRight(root) == child || GetLeft(root) == child){
+      return root;
+    }
+    if(GetData(root) >= GetData(child)){
       if(GetLeft(root)){
-        return(BST_GetParentNode(GetLeft(root), data));
+        return(BST_GetParentNode(GetLeft(root), child));
       }
     } else {
       if(GetRight(root)){
-        return (BST_GetParentNode(GetRight(root), data));
+        return (BST_GetParentNode(GetRight(root), child));
       }
     }
   }
