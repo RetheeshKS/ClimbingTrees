@@ -7,9 +7,22 @@ void AVL_BalanceTree(datanode *root, int newdata)
     
   }
 }
-datanode * AVL_GetImbalanced()
+
+datanode * AVL_GetImbalanced(datanode *root, int hopkey)
 {
+   if(!root){
+     return null;
+   }
+   if(abs(GetBalanceFactor(root)) >= 2){
+     return root;
+   } else if(GetData(root) >= pathkey){
+     return (AVL_GetImbalanced(GetLeft(root), hopkey));
+   } else {
+     return (AVL_GetImbalanced(GetRight(root), hopkey));
+   }
 }
+
+int AVL_GetImbalanceType(datanode *grandParent, int )
 datanode * AVL_InsertNode(datanode *root, int data)
 {
   datanode *child = NULL, parent = NULL;
